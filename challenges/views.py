@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseNotFound   #imported http module
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect  #imported http module
 
-challenges = {
+challenges = {  #dictionary to store challenges
     "january": "Learn the basics of Data Structures and Algorithms.",
     "february": "Build a simple CRUD application using Django.",
     "march": "Master advanced Python concepts like decorators and generators.",
@@ -19,12 +19,17 @@ challenges = {
 # Create your views here.
 
 def monthly_challenges_by_number(request, month):
-    return HttpResponse(month)
+    months = list(challenges.keys())
+
+    if month > len(months):     #checking month is greater than given keys
+        return HttpResponseNotFound("Invalid Month!")
+
+    redirect_month = months[month-1]   #index starts from 0 
+    return HttpResponseRedirect("/challenges/" + redirect_month)  #redirects this to monthly_challenges view's url
 
 def monthly_challenges(request, month):  #this is a function based view processing request
-    try:
-        challenge_text = challenges[month]
+    try:   #try block to catch any exception
+        challenge_text = challenges[month]    #accessing value from dictionary
         return HttpResponse(challenge_text)
     except:
-        return HttpResponseNotFound("Page not found!")
-       #returns a response to the server after processing the view
+        return HttpResponseNotFound("Page not found!") #returns a response to the server after processing the view
