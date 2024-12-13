@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect  #imported http module
+from django.urls import reverse
 
 challenges = {  #dictionary to store challenges
     "january": "Learn the basics of Data Structures and Algorithms.",
@@ -24,8 +25,11 @@ def monthly_challenges_by_number(request, month):
     if month > len(months):     #checking month is greater than given keys
         return HttpResponseNotFound("Invalid Month!")
 
-    redirect_month = months[month-1]   #index starts from 0 
-    return HttpResponseRedirect("/challenges/" + redirect_month)  #redirects this to monthly_challenges view's url
+    redirect_month = months[month-1]  #index starts from 0 
+
+    redirect_path = reverse("month-challenge", args= [redirect_month])  #reverse function to redirect path challenges/january
+
+    return HttpResponseRedirect(redirect_path)  #redirects this to monthly_challenges view's url
 
 def monthly_challenges(request, month):  #this is a function based view processing request
     try:   #try block to catch any exception
