@@ -19,6 +19,17 @@ challenges = {  #dictionary to store challenges
 
 # Create your views here.
 
+def month_list(request):   #list out the months
+    list_items = ""
+    months = list(challenges.keys())
+    for month in months:     #looping through months
+        capitalized_month = month.capitalize()
+        month_path = reverse('month-challenge', args=[month])
+        list_items += f"<li><a href='{month_path}'> {capitalized_month}</a></li>" #anchor tag for creating links
+        
+    response_data = f"<ul>{list_items}</ul>"
+    return HttpResponse(response_data)
+
 def monthly_challenges_by_number(request, month):
     months = list(challenges.keys())
 
@@ -34,6 +45,7 @@ def monthly_challenges_by_number(request, month):
 def monthly_challenges(request, month):  #this is a function based view processing request
     try:   #try block to catch any exception
         challenge_text = challenges[month]    #accessing value from dictionary
-        return HttpResponse(challenge_text)
+        response_data = f"<h1>{challenge_text}</h1>"
+        return HttpResponse(response_data)
     except:
-        return HttpResponseNotFound("Page not found!") #returns a response to the server after processing the view
+        return HttpResponseNotFound("<h1>Page not found!</h1>") #returns a response to the server after processing the view
