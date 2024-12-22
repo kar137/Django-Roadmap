@@ -1,4 +1,4 @@
-from django.shortcuts import render  
+from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect  #imported http module
 from django.urls import reverse
 from django.template.loader import render_to_string  #converts anything to string
@@ -45,6 +45,9 @@ def monthly_challenges_by_number(request, month):
 def monthly_challenges(request, month):  #this is a function based view processing request
     try:
         challenge_text = challenges[month]    #accessing value from dictionary
-        return render(request, "challenges/challenge.html") #returns httpresponse object with the rendered html 
+        return render(request, "challenges/challenge.html", {
+            "text": challenge_text,
+            "month": month
+        }) #returns httpresponse object with the rendered html
     except:
         return HttpResponseNotFound("<h1>Page not found!</h1>") #returns a response to the server after processing the view
