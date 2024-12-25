@@ -43,7 +43,7 @@ def monthly_challenges(request, month):  #this is a function based view processi
         challenge_text = challenges[month]    #accessing value from dictionary
         return render(request, "challenges/challenge.html", {
             "text": challenge_text,
-            "month": month
+            "month": month,
         }) #returns httpresponse object with the rendered html
     except:
         return HttpResponseNotFound("<h1>Page not found!</h1>") #returns a response to the server after processing the view
