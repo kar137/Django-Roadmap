@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Challenges</title>
+  </head>
+  <body>
+    <ul>
+      {% for month in months %}
+      <!--the for tag for looping through months -->
+      <li>
+        <!--url tag for dynamic urls-->
+        <a href="{% url 'month-challenge' month %}"
+          >{{ month | title }}<!--variable interpolation--></a
+        >
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
