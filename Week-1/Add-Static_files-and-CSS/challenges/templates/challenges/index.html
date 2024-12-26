@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 <!--template inheritance from base.html-->
+{% load static %}   <!--loads static files using static tag.-->
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'challenges/challenges.css' %}">  <!--link element for the css files.-->
+{% endblock %}
 
 {% block page_title %}
-  All Challenges
-  <!--block tag for injecting content into the base code-->
-  
-{% endblock %} 
+  All Challenges 
+{% endblock %} <!--block tag for injecting content into the base code-->
 
 {% block content %} 
 
