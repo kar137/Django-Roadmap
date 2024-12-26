@@ -6,4 +6,5 @@ html{
 
 body{
     margin: 0;
+    background: linear-gradient(to bottom right, #5c7fa5, #6080a4);
 }

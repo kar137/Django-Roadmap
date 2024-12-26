@@ -1,28 +1,27 @@
 {% extends "base.html" %}
 <!--template inheritance from base.html-->
-{% load static %}   <!--loads static files using static tag.-->
+{% load static %}
+<!--loads static files using static tag.-->
 
 {% block css_files %}
-  <link rel="stylesheet" href="{% static 'challenges/challenges.css' %}">  <!--link element for the css files.-->
-{% endblock %}
-
-{% block page_title %}
-  All Challenges 
-{% endblock %} <!--block tag for injecting content into the base code-->
+  <link rel="stylesheet" href="{% static "challenges/challenges.css" %}"><!--link element for the css files.-->
+  <link rel="stylesheet" href="{% static "challenges/includes/header.css" %}"> 
+{% endblock %} 
+{% block page_title %} All Challenges {% endblock %}
+<!--block tag for injecting content into the base code-->
 
 {% block content %} 
-
-  {% include "challenges/includes/header.html" with active_page="index" %}
-  <!--includes the partial template snippets-->
+{% include "challenges/includes/header.html" with active_page="index" %}
+<!--includes the partial template snippets-->
 
 <ul>
   {% for month in months %}
   <!--the for tag for looping through months -->
   <li>
     <!--url tag for dynamic urls-->
-    <a href="{% url 'month-challenge' month %}"
-      >{{ month | title }}<!--variable interpolation--></a
-    >
+    <a href="{% url 'month-challenge' month %}">
+      {{ month | title }}<!--variable interpolation-->
+    </a>
   </li>
   {% endfor %}
 </ul>

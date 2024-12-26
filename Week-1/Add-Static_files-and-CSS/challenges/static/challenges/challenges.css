@@ -1,3 +1,36 @@
 ul{
     list-style: none;
+    margin: 2rem auto;
+    width: 80%;
+    max-width: 20rem;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.24);
+    padding: 1rem;
+    border-radius: 10px; 
+    display: flex;  
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 35rem;
+    background-color: #001F3F;
+}
+
+li{
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1.8rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+}
+
+li:last-of-type,
+li:nth-of-type(6){
+    border-bottom: none;
+}
+
+li a{
+    text-decoration: none;
+    color: rgb(87, 87, 87);
+}
+li a:hover,
+li a:active{
+    color: rgb(154, 29, 113);
 }

@@ -1,0 +1,21 @@
+h1,h2{
+    text-align: center;
+    color: whitesmoke;
+}
+
+h1{
+    font-size: 1.7rem;
+    margin: 2rem 0 1rem 0;
+    font-weight: normal;
+    color: #60005b;
+}
+
+h2{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.fallback{
+    text-align: center;
+    color: whitesmoke;
+}
