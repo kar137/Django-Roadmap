@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+<!--template inheritance from base.html-->
+
+{% block page_title %}
+  All Challenges
+  <!--block tag for injecting content into the base code-->
+  
+{% endblock %} 
+
+{% block content %} 
+
+  {% include "challenges/includes/header.html" with active_page="index" %}
+  <!--includes the partial template snippets-->
+
+<ul>
+  {% for month in months %}
+  <!--the for tag for looping through months -->
+  <li>
+    <!--url tag for dynamic urls-->
+    <a href="{% url 'month-challenge' month %}"
+      >{{ month | title }}<!--variable interpolation--></a
+    >
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

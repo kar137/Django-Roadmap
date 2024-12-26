@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+<!--template inheritance from base.html-->
+
+{% block page_title %}
+
+  {{ month | title }} Challenge
+  <!--includes the partial template snippets-->
+
+{% endblock %} 
+
+{% block content %}
+
+{% include "challenges/includes/header.html" with active_page="challenge" %}  <!--includes the partial template snippets-->
+
+  <h1>The {{month | title}} challenge is</h1>
+  
+  {% if text is not None %}
+    <h2>{{ text }}</h2>
+  {% else %}
+    <h2>There is no any challenge for this month!</h2>
+  {% endif %} 
+
+{% endblock %}
