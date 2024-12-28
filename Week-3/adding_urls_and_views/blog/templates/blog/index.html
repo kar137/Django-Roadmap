@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block page_title %}Latest Blog Posts{% endblock %}
+{% block content %}
+<h1>Welcome to Karan Bista's Blog!</h1>
+<p>
+  Hi there! I'm Karan Bista, and I'm thrilled to have you here. This blog is a
+  space where I share my thoughts, ideas, and insights on topics I'm passionate
+  about. Whether it's tech, creativity, or exploring new challenges, there's
+  always something exciting happening here. Feel free to explore, comment, and
+  connect—this blog is as much about sharing as it is about learning together.
+  Thanks for stopping by, and I hope you enjoy your time here!
+</p>
+
+<ul>
+  {% for post in post_list %}
+  <li>
+    <a href="">{{ post | title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
