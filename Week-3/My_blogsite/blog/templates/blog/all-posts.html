@@ -1,0 +1,25 @@
+{% extends "base.html" %}  <!--inherits from base.html-->
+{% load static %}
+
+{% block page_title %}
+ My Blog 
+{% endblock %}  <!--injects title to the page-->
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/post.css' %}" >
+    <link rel="stylesheet" href="{% static 'blog/all-posts.css' %}" > 
+{% endblock %}  <!-- injects this css to the starting page with base template -->
+
+{% block content %}
+<section id="all-posts">
+    <h2>My Collected Posts</h2>
+    <ul>
+        {% include 'blog/includes/post.html' %} 
+        {% include 'blog/includes/post.html' %} 
+        {% include 'blog/includes/post.html' %} 
+        {% include 'blog/includes/post.html' %}  
+        {% include 'blog/includes/post.html' %} 
+    </ul>
+
+</section>
+{% endblock %}
