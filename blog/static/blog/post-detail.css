@@ -55,8 +55,19 @@ body {
     width: 90%;
     max-width: 90rem;
     margin: 3rem auto;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  }
+    background-color: #ffffff; /* Clean white background */
+    padding: 2rem; /* Add more padding for better spacing */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer and slightly elevated shadow */
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Modern and clean font */
+    color: #333; /* Dark gray text color for better readability */
+    line-height: 1.8; /* Improve readability with better line spacing */
+}
+
+/* Add some visual interest with hover effects */
+main:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+}
