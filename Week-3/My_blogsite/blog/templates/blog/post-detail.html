@@ -1,0 +1,33 @@
+{% extends "base.html" %}  <!--inherits from base.html-->
+{% load static %}
+
+{% block page_title %}
+    This Post Title
+{% endblock %}  <!--injects title to the page-->
+
+{% block css_files %}
+ <link rel="stylesheet" href="{% static 'blog/post.css' %}" > 
+ <link rel="stylesheet" href="{% static 'blog/post-detail.css' %}" > 
+{% endblock %}  <!-- injects this css to the starting page with base template -->
+
+
+{% block content %} 
+
+<section id="summary">
+    <h2>Post Title</h2>
+    <article>
+        <img src="{% static 'blog/images/mountain.jpg' %}" alt="Post Title">
+        <address>By Karan</address>
+        <div>Last Updated on <time>July 10th</time></div>
+    </article>
+
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque suscipit modi fuga consequatur voluptatem. Esse, vero mollitia perspiciatis quidem laboriosam ad minima tenetur! Exercitationem, doloremque? Nemo soluta ab sed neque.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, optio exercitationem. In dolores voluptatum suscipit ab laboriosam molestias totam similique odio officia minus. Beatae cupiditate culpa velit est veritatis ratione.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tenetur quod vel laborum temporibus reiciendis magni velit illum voluptates, eum porro, sapiente adipisci animi facere deleniti unde dolore nam illo!</p>
+    </main>
+</section>
+
+{% endblock %}
