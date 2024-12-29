@@ -2,10 +2,10 @@
 
 <li>
   <article class="post">
-    <a href="{% url 'post-detail-page' 'mountains' %}">
+    <a href="{% url 'post-detail-page' post.slug %}">
       <img
-        src="{% static 'blog/images/mountain.jpg' %}"
-        alt="Mountain Hiking"
+        src="{% static 'blog/images/'|add:post.image %}"
+        alt="{{post.title}}"
         style="
           width: 120px;
           height: 120px;
@@ -15,12 +15,8 @@
         "
       />
       <div>
-        <h3>Mountain Hiking></h3>
-        <p>
-          There's nothing like the views in the himalayas with all the highest
-          peaks smiling at you at once. With those snowcapped mountains it feels
-          like heaven to look at the sunrise
-        </p>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt }}</p>
       </div>
     </a>
   </article>
