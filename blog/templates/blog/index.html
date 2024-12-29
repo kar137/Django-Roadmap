@@ -6,18 +6,12 @@
 {% endblock %}  <!--injects title to the page-->
 
 {% block css_files %}
+ <link rel="stylesheet" href="{% static 'blog/post.css' %}" > 
  <link rel="stylesheet" href="{% static 'blog/index.css' %}" > 
 {% endblock %}  <!-- injects this css to the starting page with base template -->
 
 
-{% block content %}   <!--injects body to the page-->
-
-    <header id="main-navigation">    <!-- Navigatory section to navigate throughout the blogsite -->
-        <h1><a href="">Karan' Blog</a></h1>
-        <nav>
-            <a href="">All posts</a>
-        </nav>
-    </header>
+{% block content %}   <!--injects body to the page--> 
     <section id="welcome">   <!-- welcome section for the introductory part -->
         <header>
             <img src="{% static 'blog/images/karan.jpg' %}" alt="Karan - The Author Of This Blog!" />
@@ -30,17 +24,7 @@
     <section id="latest-posts"> <!-- latest posts section to handle latest post by order -->
         <h2>My Latest Thoughts</h2>
         <ul>
-            <li>
-                <article>
-                    <a href="">
-                        <img src="{% static 'blog/images/mountain.jpg' %}" alt="Mountain Hiking"  style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block;">
-                        <div>
-                            <h3>Mountain Hiking></h3>
-                            <p>There's nothing like the views in the himalayas with all the highest peaks smiling at you at once. With those snowcapped mountains it feels like heaven to look at the sunrise</p>
-                        </div>
-                    </a>
-                </article>    
-            </li>    
+            {% include 'blog/includes/post.html' %}    
         </ul>
     </section>
 
