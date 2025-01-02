@@ -1,0 +1,29 @@
+{% extends "base.html" %}  <!--inherits from base.html-->
+{% load static %}
+
+{% block page_title %}
+    {{ post.title }}
+{% endblock %}  <!--injects title to the page-->
+
+{% block css_files %}
+ <link rel="stylesheet" href="{% static 'blog/post.css' %}" > 
+ <link rel="stylesheet" href="{% static 'blog/post-detail.css' %}" > 
+{% endblock %}  <!-- injects this css to the starting page with base template -->
+
+
+{% block content %} 
+
+<section id="summary">
+    <h2>{{ post.title }}</h2>
+    <article>
+        <img src="{% static 'blog/images/'|add:post.image %}" alt="{{ post.title }}">
+        <address>{{ post.author }}</address>
+        <div>Last Updated on <time>{{ post.date|date:"d M Y" }}</time></div>
+    </article>
+
+    <main>
+        {{ post.content| linebreaks }}
+    </main>
+</section>
+
+{% endblock %}
