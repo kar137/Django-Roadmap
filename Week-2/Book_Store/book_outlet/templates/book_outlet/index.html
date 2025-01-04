@@ -5,11 +5,18 @@
 {% endblock %}
 
 {% block content %}
-<ul>
-    {% for book in books %}
-    <li>
-    <a href="{{ book.get_absolute_url }}">{{ book.title }}</a> (Rating: {{ book.rating }}) 
-    </li>
-    {% endfor %}
-</ul>
+  <ul>
+      {% for book in books %}
+      <li>
+      <a href="{{ book.get_absolute_url }}">{{ book.title }}</a> (Rating: {{ book.rating }}) 
+      </li>
+      {% endfor %}
+  </ul>
+
+  <hr>
+  
+    <p>Total Number Of Books: {{ num_books }}</p>
+    <p>Average Rating: {{ avg_rating.rating__avg }}</p>
+
+
 {% endblock %}
