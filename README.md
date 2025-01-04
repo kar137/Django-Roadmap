@@ -42,9 +42,9 @@ This repository was created to provide a clear and organized plan for learning D
 | -------- | --------------------------------------------- | -------------- |
 | Week 1   | Django Installation, Setup, and First Project | ✅ Completed   |
 |          | Views, Templates, and URL Routing             | ✅ Completed   |
-| Week 2   | Models, Migrations, Admin Panel               | 🔄 In Progress |
-| Week 3   | Build a Blog Application                      | 🔄 In Progress |
-| Week 4   | Django Forms and User Authentication          | ⏳ Coming Soon |
+| Week 2   | Models, Migrations, Admin Panel               | ✅ Completed   |
+| Week 3   | Build a Blog Application                      | ✅ Completed   |
+| Week 4   | Django Forms and User Authentication          | 🔄 In Progress |
 | Week 5   | Deployment (Heroku, AWS)                      | ⏳ Coming Soon |
 
 _Note: This weekly plan is subject to change as I progress and discover new areas that require deeper focus._
@@ -58,7 +58,7 @@ This section will list all the projects I build as part of my Django learning jo
 | **Project**         | **Description**                                  | **Status**     |
 | ------------------- | ------------------------------------------------ | -------------- |
 | [To-Do List App](#) | A simple CRUD (Create, Read, Update, Delete) app | ✅ Completed   |
-| [Blog Website](#)   | A full-stack blog with user authentication       | 🔄 In Progress |
+| [Blog Website](#)   | A full-stack blog with user authentication       | ✅ Completed   |
 | [E-Commerce](#)     | Mini e-commerce app with cart and checkout       | ⏳ Coming Soon |
 
 _Links to individual projects and detailed descriptions will be added as they are completed._
