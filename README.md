@@ -44,7 +44,7 @@ This repository was created to provide a clear and organized plan for learning D
 |          | Views, Templates, and URL Routing             | ✅ Completed   |
 | Week 2   | Models, Migrations, Admin Panel               | ✅ Completed   |
 | Week 3   | Build a Blog Application                      | ✅ Completed   |
-| Week 4   | Django Forms and User Authentication          | 🔄 In Progress |
+| Week 4   | Forms, Class Views, File Uploads, Sessions    | 🔄 In Progress |
 | Week 5   | Deployment (Heroku, AWS)                      | ⏳ Coming Soon |
 
 _Note: This weekly plan is subject to change as I progress and discover new areas that require deeper focus._

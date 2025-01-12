@@ -18,7 +18,7 @@ class ReviewView(CreateView):   #inherits CreateView from django
     # def form_valid(self, form):   #works out with valid form 
     #     form.save()                  #saves form to the database
     #     return super().form_valid(form)
-    
+
 
 class ThankyouView(TemplateView):
     template_name = "reviews/thankyou.html"
