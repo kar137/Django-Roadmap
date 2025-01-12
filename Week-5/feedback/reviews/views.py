@@ -41,7 +41,7 @@ class ReviewDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         loaded_review = self.object
         request = self.request
-        fav_id = request.session["favorite_review"]
+        fav_id = request.session.get("favorite_review")
         context["is_fav"] = fav_id == str(loaded_review.id)
         return context
 
