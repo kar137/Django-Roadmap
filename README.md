@@ -1,5 +1,7 @@
 # Django-Roadmap
 
+![Project Logo](images/dj.jpg)
+
 # 📘 Django Roadmap
 
 Welcome to my **Django Roadmap** repository! 🌟 This repo outlines my structured learning path for mastering Django, one of the most popular web development frameworks. It includes my goals, weekly progress, and hands-on projects. This roadmap will help me track my development journey and serve as a guide for others looking to follow a similar path.
@@ -38,14 +40,14 @@ This repository was created to provide a clear and organized plan for learning D
 
 ## 🔄 **Weekly Plan**
 
-| **Week** | **Topics & Concepts**                         | **Status**     |
-| -------- | --------------------------------------------- | -------------- |
-| Week 1   | Django Installation, Setup, and First Project | ✅ Completed   |
-|          | Views, Templates, and URL Routing             | ✅ Completed   |
-| Week 2   | Models, Migrations, Admin Panel               | ✅ Completed   |
-| Week 3   | Build a Blog Application                      | ✅ Completed   |
-| Week 4   | Forms and Class Based Views                   | ✅ Completed   |
-| Week 5   | File Uploads, Sessions                        | ✅ Completed   |
+| **Week** | **Topics & Concepts**                         | **Status**   |
+| -------- | --------------------------------------------- | ------------ |
+| Week 1   | Django Installation, Setup, and First Project | ✅ Completed |
+|          | Views, Templates, and URL Routing             | ✅ Completed |
+| Week 2   | Models, Migrations, Admin Panel               | ✅ Completed |
+| Week 3   | Build a Blog Application                      | ✅ Completed |
+| Week 4   | Forms and Class Based Views                   | ✅ Completed |
+| Week 5   | File Uploads, Sessions                        | ✅ Completed |
 
 _Note: This weekly plan is subject to change as I progress and discover new areas that require deeper focus._
 
@@ -55,10 +57,10 @@ _Note: This weekly plan is subject to change as I progress and discover new area
 
 This section will list all the projects I build as part of my Django learning journey.
 
-| **Project**         | **Description**                                  | **Status**     |
-| ------------------- | ------------------------------------------------ | -------------- |
-| [To-Do List App](#) | A simple CRUD (Create, Read, Update, Delete) app | ✅ Completed   |
-| [Blog Website](#)   | A full-stack blog with user authentication       | ✅ Completed   |
+| **Project**         | **Description**                                  | **Status**   |
+| ------------------- | ------------------------------------------------ | ------------ |
+| [To-Do List App](#) | A simple CRUD (Create, Read, Update, Delete) app | ✅ Completed |
+| [Blog Website](#)   | A full-stack blog with user authentication       | ✅ Completed |
 
 _Links to individual projects and detailed descriptions will be added as they are completed._
 
