@@ -1,6 +1,6 @@
 # Django-Roadmap
 
-![Project Logo](images/dj.jpg)
+![Project Logo](images/django-roadmap-banner.jpg)
 
 # 📘 Django Roadmap
 
