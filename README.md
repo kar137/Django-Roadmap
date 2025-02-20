@@ -4,7 +4,7 @@
 
 # 📘 Django Roadmap
 
-Welcome to my **Django Roadmap** repository! 🌟 This repo outlines my structured learning path for mastering Django, one of the most popular web development frameworks. It includes my goals, weekly progress, and hands-on projects. This roadmap will help me track my development journey and serve as a guide for others looking to follow a similar path.The projects are the part of my learning from Maximilian Schwarzmüller's Python Django - The Practical Guide which is available on udemy, However I have made sure to add some modifications to the projects.
+Welcome to my **Django Roadmap** repository! 🌟 This repo outlines my structured learning path for learning Django, one of the most popular web development frameworks. It includes my goals, weekly progress, and hands-on projects. This roadmap will help me track my development journey and serve as a guide for others looking to follow a similar path.The projects are the part of my learning from Maximilian Schwarzmüller's Python Django - The Practical Guide which is available on udemy, However I have made sure to add some modifications to the projects.
 
 ---
 
